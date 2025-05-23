@@ -1,12 +1,13 @@
 <a id="readme-top"></a>
 
+![Image](https://github.com/user-attachments/assets/b15602c4-9bf8-4675-b545-b87a565ddc7c)
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/tonyb650/8e204c">
-    <img src="public/dag.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/user-attachments/assets/b15602c4-9bf8-4675-b545-b87a565ddc7c" alt="Logo" width="80" height="80">
   </a>
-
   <h3 align="center">Journey Builder React Coding Challenge</h3>
 
   <p align="center">
