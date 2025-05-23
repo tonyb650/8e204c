@@ -1,7 +1,5 @@
 <a id="readme-top"></a>
 
-![Image](https://github.com/user-attachments/assets/b15602c4-9bf8-4675-b545-b87a565ddc7c)
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -135,7 +133,7 @@ npm install -g @pnpm/exe@latest-10
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-TBD...
+![Screen Recording](public/Avantos_Prefill.gif)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -19,7 +19,8 @@ const NodeCard = ({ node }: { node: Node }) => {
           {node.data.component_type}
         </div>
         <div className="text-sm">
-          {node.data.name} ({node.data.component_id.slice(-4)})
+          {node.data.name} 
+          {/* ({node.data.component_id.slice(-4)}) */}
         </div>
       </div>
     </Button>
