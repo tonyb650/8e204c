@@ -1,4 +1,6 @@
-export const data = {
+import type { ActionBlueprint } from "../types/actionBlueprint";
+
+export const data: ActionBlueprint = {
   "$schema": "http://localhost:9000/schemas/ActionBlueprintGraphDescription.json",
   "id": "bp_01jk766tckfwx84xjcxazggzyc",
   "tenant_id": "1",

@@ -1,6 +1,8 @@
 
 import axios, { type AxiosInstance } from "axios";
 
+const SLOW_API = import.meta.env.VITE_SLOW_API === "true"
+
 export const baseApi: AxiosInstance = axios.create({
   baseURL: "http://localhost:3000", // env.VITE_API_URL,
 })
@@ -10,9 +12,8 @@ export const baseApi: AxiosInstance = axios.create({
   The interceptor is passed the request object and then returns a
   Promise that calls the resolve method after a 1000ms delay
 */
-const slowing = true // env.VITE_TEST_SLOW_API
 
-if (slowing) {
+if (SLOW_API) {
   console.log("Slowing API")
   baseApi.interceptors.request.use((req) => {
     return new Promise((resolve) => {

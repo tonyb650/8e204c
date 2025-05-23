@@ -113,6 +113,10 @@ npm install -g @pnpm/exe@latest-10
     ```sh
     npm start --prefix ./frontendchallengeserver 
     ```
+    Alternatively, to use local data, set create a `.env` file and paste the in the following:
+    ```env
+    VITE_USE_CONSTANT_INSTEAD_OF_MOCK_SERVER=true
+    ```
 3. Navigate to client directory
     ```sh
     cd client 
