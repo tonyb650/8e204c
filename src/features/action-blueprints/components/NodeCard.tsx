@@ -2,7 +2,7 @@ import { Button } from "@headlessui/react"
 import { TableProperties } from "lucide-react"
 import { Link } from "react-router"
 import type { Node } from "../types/node"
-import { cn } from "../../../utils/shadCNUtils"
+import { cn } from "@/utils/shadCNUtils"
 
 const NodeCard = ({ node }: { node: Node }) => {
   return (
@@ -20,7 +20,6 @@ const NodeCard = ({ node }: { node: Node }) => {
         </div>
         <div className="text-sm">
           {node.data.name} 
-          {/* ({node.data.component_id.slice(-4)}) */}
         </div>
       </div>
     </Button>

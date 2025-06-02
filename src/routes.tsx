@@ -2,7 +2,7 @@ import type { RouteObject } from "react-router"
 import GraphPage from "./pages/GraphPage"
 import HomePage from "./pages/HomePage"
 import { RootLayout } from "./layouts/RootLayout"
-import PrefillAssignment from "./pages/PrefillAssignment"
+import PrefillAssignmentPage from "./pages/PrefillAssignmentPage"
 
 
 export const routes: RouteObject[] = [
@@ -20,7 +20,7 @@ export const routes: RouteObject[] = [
       },
       {
         path: "nodes/:nodeId/prefill",
-        element: <PrefillAssignment />,
+        element: <PrefillAssignmentPage />,
       },
     ]
   },

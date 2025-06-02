@@ -7,7 +7,7 @@ import SlideSwitch from "@/components/SlideSwitch";
 import { useState } from "react";
 import { Button } from "@headlessui/react";
 
-const PrefillAssignment = () => {
+const PrefillAssignmentPage = () => {
   const { nodeId } = useParams()
   const { actionBlueprint } = useActionBlueprint()
   const [prefillEnabled, setPrefillEnabled] = useState(false)
@@ -41,4 +41,4 @@ const PrefillAssignment = () => {
   );
 };
 
-export default PrefillAssignment
+export default PrefillAssignmentPage
