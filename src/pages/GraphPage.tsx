@@ -10,7 +10,7 @@ const GraphPage = () => {
 
   const nodes: Node[] = actionBlueprint?.nodes.sort((a: Node, b: Node) => a.data.name.localeCompare(b.data.name)) || []
 
-  if (!actionBlueprint) return <div>Loading...</div>
+  if (!actionBlueprint) return <div role="progressbar" aria-label="Loading action blueprint graph">Loading...</div>
 
   return (
     <div className='max-w-2xl m-2 border rounded-lg flex flex-col gap-2 p-2'>

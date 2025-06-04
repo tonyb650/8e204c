@@ -52,7 +52,7 @@ const PrefillFieldButton = ({elementLabel, disabled, className, onClear}: Prefil
       disabled={disabled}
       targetElementLabel={elementLabel}
       className={cn(
-        "px-2 py-1 flex items-center justify-between gap-2 w-full text-left bg-gray-200 focus:outline-none focus:bg-blue-100 hover:bg-black/30",
+        "px-3 py-1 flex items-center justify-between gap-2 w-full text-left bg-gray-200 focus:outline-none focus:bg-blue-100 hover:bg-black/30",
         variantStyle(variant),
         className
       )}

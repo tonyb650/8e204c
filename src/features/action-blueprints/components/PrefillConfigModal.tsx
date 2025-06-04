@@ -131,7 +131,12 @@ const PreviewPrefill = ({sourceElement,targetElementLabel}: PreviewPrefillProps)
   const sourceTitle = sources.find((source: DataSource) => source.id === sourceElement.id)?.title
 
   if (!sourceElement ) return null
-  if (!targetNode || !sourceTitle) return <div>Loading...</div>
+  if (!targetNode || !sourceTitle) return (
+    <div className="flex flex-col gap-2 justify-center items-center">
+      Loading...
+    </div>
+  )
+
   return (
     <div className="flex flex-col gap-2 justify-center items-center">
       <DataElementCard title="Source" dataSourceTitle={sourceTitle || ""} dataElementLabel={sourceElement.label} />

@@ -7,6 +7,7 @@ import { cn } from "@/utils/shadCNUtils"
 const NodeCard = ({ node }: { node: Node }) => {
   return (
     <Button
+      data-testid={`node-${node.id}`}
       as={Link}
       className={cn(
         "flex items-center w-48 p-1 border border-gray-300 rounded-lg shadow-sm"

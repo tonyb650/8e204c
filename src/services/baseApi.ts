@@ -19,7 +19,7 @@ if (SLOW_API) {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(req)
-      }, 500)              
+      }, 300)              
     })
   })
 }

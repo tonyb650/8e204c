@@ -6,15 +6,24 @@ import { Link, useParams } from "react-router";
 import SlideSwitch from "@/components/SlideSwitch";
 import { useState } from "react";
 import { Button } from "@headlessui/react";
+import { usePrefillMappings } from "@/features/action-blueprints/context/PrefillContext";
 
 const PrefillAssignmentPage = () => {
   const { nodeId } = useParams()
   const { actionBlueprint } = useActionBlueprint()
+  const { dispatch } = usePrefillMappings()
   const [prefillEnabled, setPrefillEnabled] = useState(false)
 
   const targetNode = actionBlueprint?.nodes.find((node: Node) => node.id === nodeId)
   const form = actionBlueprint?.forms?.find((form: Form) => form.id === targetNode?.data.component_id)
   
+  const togglePrefillEnabled = () => {
+    if(prefillEnabled) {
+      dispatch({ type: 'CLEAR_PREFILL_MAPPINGS' })
+    }
+    setPrefillEnabled(prev => !prev)
+  }
+
   if ( !actionBlueprint ) return <div>Loading...</div>;
   if ( ! nodeId || !form ) return <div>No valid node or form found...</div>;
   
@@ -23,7 +32,7 @@ const PrefillAssignmentPage = () => {
       <h1 className="text-2xl font-bold">Prefills for {targetNode?.data.name}</h1>
       <div className="flex items-center gap-2 justify-between">
         <div>Prefill fields for this form</div>
-        <SlideSwitch enabled={prefillEnabled} onChange={() => setPrefillEnabled(prev => !prev)} />
+        <SlideSwitch enabled={prefillEnabled} onChange={togglePrefillEnabled} />
       </div>
       <div className="max-w-md flex flex-col gap-2 m-2">
         {Object

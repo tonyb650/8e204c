@@ -9,7 +9,8 @@ type PrefillState = {
 // Define action types
 type PrefillAction =
   | { type: 'SET_PREFILL_MAPPING'; payload: PrefillMapping }
-  | { type: 'REMOVE_PREFILL_MAPPING'; payload: {target_node_id: string, target_property_name: string} };
+  | { type: 'REMOVE_PREFILL_MAPPING'; payload: {target_node_id: string, target_property_name: string} }
+  | { type: 'CLEAR_PREFILL_MAPPINGS'}
 
 // Initial state
 const initialState: PrefillState = {
@@ -32,6 +33,8 @@ const prefillReducer = (state: PrefillState, action: PrefillAction): PrefillStat
         ...state,
         prefillMappings: filteredPrefills,
       };
+    case 'CLEAR_PREFILL_MAPPINGS':
+      return initialState;
     default:
       return state;
   }
